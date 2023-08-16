@@ -12,7 +12,7 @@ public class CalcModel implements ICalcModel {
     @Override
     public double add(double firstNumber, double secondNumber) {
         double result = firstNumber + secondNumber;
-        logger.info("Addition: " + new double[]{firstNumber} + " + " + new double[]{secondNumber} + " = " + new double[]{result});
+        logger.info("Addition: %s + %s = %s".formatted(firstNumber, secondNumber, result));
         return result;
 
     }
@@ -20,7 +20,7 @@ public class CalcModel implements ICalcModel {
     @Override
     public double subtract(double firstNumber, double secondNumber) {
         double result = firstNumber - secondNumber;
-        logger.info("Subtraction: " + new double[]{firstNumber} + " - " + new double[]{secondNumber} + " = " + new double[]{result});
+        logger.info("Subtraction: %s - %s = %s".formatted(firstNumber, secondNumber, result));
         return result;
     }
 
@@ -36,7 +36,7 @@ public class CalcModel implements ICalcModel {
 //        return firstNumber / secondNumber;
         if(secondNumber != 0) {
             double result = firstNumber / secondNumber;
-            logger.info("Division: " + new double[]{firstNumber} + " / " + new double[]{secondNumber} + " = " + new double[]{result});
+            logger.info("Division: %s / %s = %s".formatted(firstNumber, secondNumber, result));
             return result;
         } else {
             logger.info("Деление на ноль недопустимо.");
